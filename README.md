@@ -24,19 +24,20 @@ The pipelines involve advanced preprocessing, class imbalance handling, model tr
 
 ```
 .
-├── Task1.ipynb               # Fraud detection model pipeline
-├── Task2.ipynb               # Activity recognition with ensemble model
-├── Testing_T1_T2.ipynb       # Loads saved models, runs tests, and evaluates performance
-├── T1.joblib                 # Saved model for fraud detection
-├── T2.joblib                 # Saved model for activity recognition
+├── FraudDetection.ipynb               # Fraud detection model pipeline
+├── HAR.ipynb               # Activity recognition with ensemble model
+├── Testing.ipynb       # Loads saved models, runs tests, and evaluates performance
+├── FD.joblib                 # Saved model for fraud detection
+├── HAR.joblib                 # Saved model for activity recognition
 ├── README.md                 # This file
+├── Report.pdf                # Report of all the results and observations
 ```
 
 ---
 
 ## Model Architectures
 
-### 1. Fraud Detection (`T1.joblib`)
+### 1. Fraud Detection (`FD.joblib`)
 - **Model**: XGBoost Classifier
 - **Pipeline**:
   - Load & preprocess transaction data
@@ -46,7 +47,7 @@ The pipelines involve advanced preprocessing, class imbalance handling, model tr
   - Tune hyperparameters with **GridSearchCV**
   - Evaluate with accuracy, confusion matrix, and classification report
 
-### 2. Human Activity Recognition (`T2.joblib`)
+### 2. Human Activity Recognition (`HAR.joblib`)
 - **Model**: Stacked Ensemble (Random Forest + XGBoost → Logistic Regression)
 - **Pipeline**:
   - Load sensor data and encode labels
@@ -59,7 +60,7 @@ The pipelines involve advanced preprocessing, class imbalance handling, model tr
 
 ## Model Testing
 
-Run `Testing_T1_T2.ipynb` to:
+Run `Testing.ipynb` to:
 - Load both saved models
 - Apply the same preprocessing to test datasets
 - Generate predictions
@@ -80,8 +81,8 @@ pip install scikit-learn xgboost imbalanced-learn pandas numpy joblib
 ## Getting Started
 
 1. Clone this repository  
-2. (Optional) Open and rerun `Task1.ipynb` or `Task2.ipynb` to retrain models  
-3. Run `Testing_T1_T2.ipynb` to test model performance on new data  
+2. (Optional) Open and rerun `FraudDetection.ipynb` or `HAR.ipynb` to retrain models  
+3. Run `Testing.ipynb` to test model performance on new data  
 
 You can also load and use the models in other applications:
 
@@ -89,8 +90,8 @@ You can also load and use the models in other applications:
 import joblib
 
 # Load saved models
-fraud_model = joblib.load('T1.joblib')
-activity_model = joblib.load('T2.joblib')
+fraud_model = joblib.load('FD.joblib')
+activity_model = joblib.load('HAR.joblib')
 ```
 
 ---
