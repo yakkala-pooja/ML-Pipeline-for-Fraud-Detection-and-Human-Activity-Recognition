@@ -27,8 +27,6 @@ The pipelines involve advanced preprocessing, class imbalance handling, model tr
 ├── FraudDetection.ipynb               # Fraud detection model pipeline
 ├── HAR.ipynb               # Activity recognition with ensemble model
 ├── Testing.ipynb       # Loads saved models, runs tests, and evaluates performance
-├── FD.joblib                 # Saved model for fraud detection
-├── HAR.joblib                 # Saved model for activity recognition
 ├── README.md                 # This file
 ├── Report.pdf                # Report of all the results and observations
 ```
