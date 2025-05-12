@@ -82,7 +82,8 @@ pip install scikit-learn xgboost imbalanced-learn pandas numpy joblib
 
 1. Clone this repository  
 2. (Optional) Open and rerun `FraudDetection.ipynb` or `HAR.ipynb` to retrain models  
-3. Run `Testing.ipynb` to test model performance on new data  
+3. Run `Testing.ipynb` to test model performance on new data
+4. You can find the dataset in 'https://www.kaggle.com/datasets/poojayakkala/fraud-detection-and-human-activity-recognition'
 
 You can also load and use the models in other applications:
 
